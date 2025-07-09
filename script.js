@@ -34,13 +34,14 @@ async function getCatImg() {
 
         //Creates img element and assigns attributes for each url
         //and adds them to container
-        catData.message.forEach(url => {
+        catData.forEach(cat => {
             const img = document.createElement('img');
-            img.src = url;
+            img.src = cat.url;
             img.alt = "Random cat"
             img.style.width = "200px";
             img.className = "cat";
             container.appendChild(img);
+            console.log(cat.url);
         });
     } catch (error) {
         console.error('Error:', error);
