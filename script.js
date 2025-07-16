@@ -5,7 +5,7 @@ async function getDogImg() {
         if (!response.ok) throw new Error(`HTTP error - status ${response.status}`);
         //Converts JSON into JS object (array of urls)
         const dogData = await response.json();
-        const container = document.getElementById("dog-image-container");
+        const container = document.getElementById('dog-container');
 
         //Creates img element and assigns attributes for each url
         //and adds them to container
@@ -30,7 +30,7 @@ async function getCatImg() {
         if (!response.ok) throw new Error(`HTTP error - status ${response.status}`);
         //Converts JSON into JS object (array of urls)
         const catData = await response.json();
-        const container = document.getElementById("cat-image-container");
+        const container = document.getElementById('cat-container');
 
         //Creates img element and assigns attributes for each url
         //and adds them to container
