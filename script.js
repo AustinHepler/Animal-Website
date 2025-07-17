@@ -27,6 +27,7 @@ async function getDogImg() {
             img.alt = "Random dog"
             img.style.width = "200px";
             img.className = "dog";
+            img.loading = "lazy";
             container.appendChild(img);
         });
     } catch (error) {
@@ -56,6 +57,7 @@ async function getCatImg() {
             img.alt = "Random cat"
             img.style.width = "200px";
             img.className = "cat";
+            img.loading = "lazy";
             container.appendChild(img);
             console.log(cat.url);
         });
