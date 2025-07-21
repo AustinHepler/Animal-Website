@@ -1,3 +1,4 @@
+//Function pair that adds and removes loading element
 function showLoading() {
     const loading = document.getElementById("loading");
     if (loading) loading.style.display = "block";
@@ -59,7 +60,6 @@ async function getCatImg() {
             img.className = "cat";
             img.loading = "lazy";
             container.appendChild(img);
-            console.log(cat.url);
         });
     } catch (error) {
         console.error('Error:', error);
@@ -72,10 +72,17 @@ if (document.title === "Dogs") {
     //Calls getDogImg function when page loads
     window.addEventListener('load', () => {
     getDogImg();
-});
+    document.querySelector('.load-more-btn').addEventListener('click', () => {
+        getDogImg();
+    })
+})
 } else if (document.title === "Cats") {
     //Calls getCatImg function when page loads
     window.addEventListener('load', () => {
     getCatImg();
+    document.querySelector('.load-more-btn').addEventListener('click', () => {
+        getCatImg();
+    })
 });
 }
+
