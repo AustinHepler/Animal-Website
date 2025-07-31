@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
+    padding: 10px;
 }
 
 .dog, .cat {
@@ -15,6 +16,28 @@
     vertical-align: center;
 }
 
-.site-link{
+.site-link {
     display: inline-block;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.load-more-btn {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    padding: 14px 22px;
+    border-radius: 50px;
+    background-color: rgb(219, 219, 219);
+    transition: background-color 0.2s ease;
+    font-family: sans-serif;
+}
+
+.load-more-btn:hover {
+    background-color: #0071e3;
 }
